@@ -1,0 +1,29 @@
+﻿@using ModelsTestTask.Models
+@using ModelsTestTask.ViewModels
+@model ProductCardVM
+
+<h1>Product :</h1>
+
+<ul style="list-style:none">
+
+    <li>@Model.product.id</li>
+    <li>@Model.product.name</li>
+    <li>@Model.product.color</li>
+    <li>@Model.product.size</li>
+    
+
+
+</ul>
+
+
+
+<h1>Payement methods :</h1>
+
+<ul style="list-style:none">
+
+    @foreach (Card item in Model.cards)
+    {
+        <li style="color:red">name = @item.name , cvc = @item.cvc , expiration date = @item.expDate</li>
+    }
+
+</ul>
